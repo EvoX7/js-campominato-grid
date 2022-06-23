@@ -5,7 +5,6 @@ const myContainer = document.getElementById("my_container");
 const play = document.getElementById("play");
 
 
-
 // ! Creating a clickable PLAY button for user to generate a new grid
 
 // ! Defining how many times i need to generate a square in the grid
@@ -19,9 +18,12 @@ const play = document.getElementById("play");
         
 
 
-
 for (let i = 1; i < 100 + 1; i++){
     const genSquare = fNewSquare();
+
+    // * Adding numbers to squares 
+     const ConsoleN = genSquare.innerHTML = i;
+
 
     // *Generating squares on button click 
     play.addEventListener("click", function(){
@@ -30,6 +32,8 @@ for (let i = 1; i < 100 + 1; i++){
  // *Highlighting square on button click 
 genSquare.addEventListener("click", function(){
     genSquare.classList.toggle("highlighted");
+
+    console.log(ConsoleN);
 })
 
 }
