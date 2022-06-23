@@ -64,6 +64,15 @@ body {
     border-radius: 10px;
     text-align: center;
     line-height: 38px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.play-button:hover {
+    border: 2px solid white;
+    cursor: pointer;
+    
+
 }
 
 
