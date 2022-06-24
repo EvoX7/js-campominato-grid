@@ -10,6 +10,8 @@ body {
     background-color: rgb(45, 84, 255);
 }
 
+/* !Header  */
+
 header {
     background-color: rgb(255, 184, 97);
     height: 80px;
@@ -17,14 +19,14 @@ header {
     font-family: "Titan One", cursive;
 }
 
+/* * Logo/Title  */
+
 #title {
     text-align: center;
     font-size: 50px;
     text-shadow: 2px 2px white;
     line-height: 65px;
 }
-
-
 
 .over-grid {
     position: relative;
@@ -35,6 +37,8 @@ header {
     border-radius: 10px 10px 0px 0px;
     font-family: "Titan One", cursive;
 }
+
+/* ? Grid  */
 
 #my_container {
     display: flex;
@@ -47,6 +51,8 @@ header {
     border: 10px solid rgb(77, 110, 255);
     font-family: "Titan One", cursive;
 }
+
+/* ? Grid content  */
 
 .square {
     width: calc(100% / 10);
@@ -63,6 +69,8 @@ header {
     cursor: pointer;
 }
 
+/* * Play Button and emoji  */
+
 .play-button {
     position: absolute;
     right: 15px;
@@ -77,19 +85,79 @@ header {
     line-height: 35px;
     border: 2px solid transparent;
     transition: 0.3s;
-
-}
-
-.play-button:hover {
     border: 2px solid white;
+    animation: blink 7s infinite;
     cursor: pointer;
 }
+
+/* ? Emoji  */
+
+.emoji {
+    font-size: 28px;
+}
+
+#smile {
+    position: absolute;
+    top: 40px;
+    left: 300px;
+}
+
+#explos {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+#time {
+    position: absolute;
+    top: 40px;
+    left: 500px;
+}
+
+/* * Play button animations  */
+
+@keyframes blink {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: rgb(45, 84, 255);
+        text-shadow: none;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #03bcf4,
+            0 0 80px #fff,
+            0 0 160px #03bcf4;
+
+    }
+}
+
+
+/* !Color over squares when clicked  */
 
 .highlighted {
     background-color: rgb(45, 84, 255);
     color: black;
     text-shadow: 2px 2px rgb(255, 184, 97);
-   
 }
 
 .fa-face-grin-hearts {
@@ -99,10 +167,9 @@ header {
 
 footer {
     text-align: center;
-    padding:20px;
+    padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 50px;
     background-color: rgb(255, 184, 97);
     height: 60px;
 }
-
